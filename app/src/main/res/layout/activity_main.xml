@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="740dp"
+    android:background="@color/black">
+
+    <!-- Cabecera (head) fija en la parte superior -->
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:text="RelativeLayoutDemo"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="#CA7CDE"/>
+
+    <!-- Etiqueta URL debajo de la cabecera -->
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="URL:"
+        android:layout_below="@id/head"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"/>
+
+    <!-- Campo de entrada a la derecha de la etiqueta -->
+    <EditText
+        android:id="@+id/entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/label"
+        android:layout_below="@id/head"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Línea separadora entre los botones y el campo de entrada -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/entry"
+        android:background="#0000FF"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Botón Cancel a la izquierda -->
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entry"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:text="Cancel"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"/>
+
+    <!-- Botón OK a la derecha del botón Cancel -->
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entry"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:text="OK"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>
